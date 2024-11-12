@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ohjelmoinnin maailma</title>
+</head>
+<body>
+    <h1>Tervetuloa ohjelmoinnin maailmaan!</h1>
+    <p>Tämä on esittelysivu HTML:stä, CSS:stä ja JavaScriptistä.</p>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+</body>
+</html>
