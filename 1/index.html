@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kuvagalleria</title>
+    <style>
+        #gallery {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var images = [
+            'kuva1.jpg', 
+            'kuva2.jpg', 
+            'kuva3.jpg'
+        ];
+        var currentIndex = 0;
+        
+        function showImage(index) {
+            var img = document.getElementById('currentImage');
+            img.src = images[index];
+        }
+        
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+        
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+        
+        window.onload = function() {
+            showImage(currentIndex);
+        }
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <img id="currentImage" src="kuva1.jpg" alt="Kuva" />
+        <br>
+        <button onclick="prevImage()">Edellinen</button>
+        <button onclick="nextImage()">Seuraava</button>
+    </div>
+</body>
+</html>
