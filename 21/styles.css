@@ -23,12 +23,55 @@ footer {
     background-color: #333;
     color: white;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px;
+}
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
 /* Media Queries */
 @media (max-width: 768px) {
+    nav ul{
+        display: none;
+        flex-direction:column;
+        width: 100%;
+        background-color: #4CAF50;
+    }
     main {
         font-size: 1.2em;
     }
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon.active + ul {
+        display: flex;
+    }
+}
 }
 
 @media (max-width: 480px) {
