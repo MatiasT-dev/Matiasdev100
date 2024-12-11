@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo-lista</title>
+    <style>
+        #todoList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #todoList li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        #todoList button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function addTask() {
+            var taskText = document.getElementById('taskInput').value;
+            if (taskText === "") {
+                alert("Tehtävä ei voi olla tyhjä!");
+                return;
+            }
+            
+            var li = document.createElement('li');
+            li.textContent = taskText;
+            
+            var removeButton = document.createElement('button');
+            removeButton.textContent = "Poista";
+            removeButton.onclick = function() {
+                this.parentElement.remove();
+            };
+            
+            li.appendChild(removeButton);
+            document.getElementById('todoList').appendChild(li);
+            
+            document.getElementById('taskInput').value = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Todo-lista</h1>
+    <input type="text" id="taskInput" placeholder="Kirjoita tehtävä">
+    <button onclick="addTask()">Lisää tehtävä</button>
+    <ul id="todoList"></ul>
+</body>
+</html>
