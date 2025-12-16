@@ -26,10 +26,40 @@
 <div id="laatikko">
     
     <div id="header" title="Suomalaisen Lihan Kauppa">
+
+
+       <div class="off-screen-menu">
+            <ul>
+              <li><a href="etusivu.html" title="Etusivu">Etusivu</a></li>
+              <li><a href="tuotteet.html" title="Tuotteet">Tuotteet</a></li>
+              <li><a href="ennakkotilaus.html" title="Ennakkotilaus">Ennakkotilaus</a></li>
+              <li><a href="yhteistiedot.html" title="Yhteystiedot">Yhteystiedot</a></li>
+            </ul>
+          </div>
+
+
+          <nav>
+            <div class="hambur">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+
+
       <ul id="linkit"><li><a href="etusivu.html" title="Etusivu">Etusivu</a></li><li><a href="tuotteet.html" title="Tuotteet">Tuotteet</a></li><li><a href="ennakkotilaus.html" title="Ennakkotilaus">Ennakkotilaus</a></li><li id="active"><a href="yhteistiedot.html" title="Yhteystiedot">Yhteystiedot</a></li></ul>    </div>
     
     <div id="sisalto">
     
+  <script>
+  const haMbur = document.querySelector('.hambur');
+  const offscreenmenu = document.querySelector('.off-screen-menu');
+
+  haMbur.addEventListener('click', () => {
+  haMbur.classList.toggle('active');
+  offscreenmenu.classList.toggle('active')})
+</script>
       
 <!--Yhteystiedot ja Aukioloajat naky-->
  <h1>Yhteystiedot</h1>
@@ -85,6 +115,5 @@
     </div>
     </div>
 </div>
-
 
 </body></html>
