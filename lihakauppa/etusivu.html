@@ -19,7 +19,7 @@
 
 <body>
 
-    
+
     
 <div class="flex-container">
     
@@ -27,13 +27,42 @@
     <div id="laatikko">
     
         <div id="header" title="Suomalaisen Lihan Kauppa">
+        
+
+          <div class="off-screen-menu">
+            <ul>
+              <li><a href="etusivu.html" title="Etusivu">Etusivu</a></li>
+              <li><a href="tuotteet.html" title="Tuotteet">Tuotteet</a></li>
+              <li><a href="ennakkotilaus.html" title="Ennakkotilaus">Ennakkotilaus</a></li>
+              <li><a href="yhteistiedot.html" title="Yhteystiedot">Yhteystiedot</a></li>
+            </ul>
+          </div>
+
+
+          <nav>
+            <div class="hambur">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+          
+
         <ul id="linkit"><li id="active"><a href="etusivu.html" title="Etusivu">Etusivu</a></li><li><a href="tuotteet.html" title="Tuotteet">Tuotteet</a></li><li><a href="ennakkotilaus.html" title="Ennakkotilaus">Ennakkotilaus</a></li><li><a href="yhteistiedot.html" title="Yhteystiedot">Yhteystiedot</a></li></ul>    </div>
     
      <div id="sisalto">
     
 <h1>Suomalaisen Lihan Kauppa Oulainen</h1>
  
+<script>
+const haMbur = document.querySelector('.hambur');
+const offscreenmenu = document.querySelector('.off-screen-menu');
 
+haMbur.addEventListener('click', () => {
+  haMbur.classList.toggle('active');
+  offscreenmenu.classList.toggle('active')})
+</script>
 
 <!--uutisia jotka nättävät teksin näkyvästi-->
 <div class="news"><span style="color: #ff8787;">Juhannusviikolla kauppa auki myös Maanantaina... Aattonakin 10-12</span></div>
@@ -78,6 +107,4 @@
 </div>
 
 </body>
-
 </html>
-
