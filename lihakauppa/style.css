@@ -43,12 +43,22 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
+		text-align: left;
 		transition: .3s ease;
+		font-family: Arial, Helvetica, sans-serif;
+		
+		color: #0D4EBE;
 	}
 	.off-screen-menu.active {
 		right: 0;
+		
 	}
+
+	.off-screen-menu li a{
+		text-decoration: none;
+		color: #0D4EBE;
+	}
+	
 
 	nav {
 		padding: 1rem;
@@ -129,13 +139,23 @@ body {
 		margin-top: 6px;
 	}
 
+
+	#likit {
+		background-color: #3B5997;
+	}
+
+	#likit a {
+		color: #FFF;
+	}
+
 	h1 {
 		font-size: 19px;
 		text-transform: uppercase;
 		background-image: url(images/lataus.png);
     	background-size: 40px;
+		background-position-y: -5px;
 		background-repeat: no-repeat;
-		background-position: left center;
+	
 		line-height: 30px;
 		text-indent: 50px;
 		color: #0D4EBE;
