@@ -124,7 +124,7 @@ body {
    #header {
 	font-size: 10px;
 	height: 60px;
-	background-size: 90px;
+	background-size: 190px;
   }
   
   .test {
@@ -227,6 +227,7 @@ body {
   #header {
 	font-size: 20px;
 	height: 125px;
+	background-size: 300px;
   }
     .test {
         font-size: 16px;
@@ -279,7 +280,7 @@ img {
 	margin-bottom: 50px;
 }
 #header {
-	background-image: url(images/logo.jfif);
+	background-image: url(images/logo2.jfif);
 	background-repeat: no-repeat;
 	background-position: left center;
 	background-color: #FFF;
