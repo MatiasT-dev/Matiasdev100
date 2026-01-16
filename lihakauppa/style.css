@@ -15,7 +15,7 @@ body {
   background-color: #ffffff;
   padding: 10px;
   text-align: left;
-  width: 100%;
+  width: 50%;
   
 }
 
@@ -75,7 +75,7 @@ body {
 	}
 	.hambur span {
 		height: 5px;
-		width: 100%;
+		width: 50%;
 		background-color: #39F;
 		border-radius: 25px;
 		position: absolute;
@@ -85,7 +85,7 @@ body {
 		transition: .3s ease;
 	}
 	.hambur span:nth-child(1) {
-		top: 15%;
+		top: 25%;
 	}
 	.hambur span:nth-child(3) {
 		top: 85%;
@@ -415,7 +415,7 @@ body {
 	border-right-style: solid;
 	border-right-color: #FFF;
 	padding-top: 0px;
-	padding-right: 25px;
+	padding-right: 55px;
 	padding-bottom: 0px;
 	padding-left: 0px;
 	margin: 0px;
@@ -474,3 +474,4 @@ body {
 	font-weight: bold;
 	color: #39F;
 }
+
