@@ -113,13 +113,13 @@ haMbur.addEventListener('click', () => {
 			<br>
 			<input name="contactform_name" id="contactform_name" type="text">
 			<br>
-      <!--<p id="eisähköpostia" class="eimitään" style="display: none;">laitain sähköposti</p>-->
+      <p id="eisähköpostia" class="eimitään" style="display: none;">laitain sähköposti tai puhelin numero</p>
             <label for="contactform_sender">Sähköposti:</label>
             <br>
 			<input name="contactform_sender" id="contactform_sender" type="email">   
             <br>
 			
-          <!--<p id="einumeroa" class="eimitään" style="display: none;">laitain puhelin numero</p>-->
+          
             <label for="contactform_number">Puhelin:</label>
     		<br>
         
@@ -139,13 +139,13 @@ haMbur.addEventListener('click', () => {
       //ilmoitaa asiakaale jos hän ei ole laitanut mitään tietoihin.
       function nimentarkastus(form) {
         var Nimi = form.contactform_name.value;
-        //var sposti = form.contactform_sender.value;
-        //var Puhelin = form.contactform_number.value;
+        var sposti = form.contactform_sender.value;
+        var Puhelin = form.contactform_number.value;
         var viesti = form.contactform_message.value;
 
         var einimea = document.getElementById("einimeä");
-        //var eipostia = document.getElementById("eisähköpostia");
-        //var einumeroat = document.getElementById("einumeroa");
+        var eipostia = document.getElementById("eisähköpostia");
+        
         var eitilaust = document.getElementById("eitilausta");
 
 
@@ -155,6 +155,10 @@ haMbur.addEventListener('click', () => {
           return false;
           
 
+        }
+        if (sposti === '' && Puhelin === '') {
+          eipostia.style.display = "block";
+          return false;
         }
         
         if (viesti === '') {
