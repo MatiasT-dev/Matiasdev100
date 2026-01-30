@@ -26,6 +26,7 @@ body {
   div.flex-container {
 	
     flex-direction: column;
+	
   }
 
   
@@ -288,6 +289,11 @@ body {
   
 }
 
+.eimitään {
+	font-size: 14px;
+	color: #ff4141;
+	margin: 1px;
+}
 
 
 #laatikko {
@@ -411,15 +417,21 @@ body {
 	display: block;
 	float: left;
 	list-style-type: none;
-	border-right-width: 3px;
+	border-right-width: 4px;
 	border-right-style: solid;
 	border-right-color: #FFF;
+	
 	padding-top: 0px;
 	padding-right: 25px;
 	padding-bottom: 0px;
 	padding-left: 0px;
 	margin: 0px;
 }
+
+.info li {
+	margin-bottom: 10px;
+}
+
 .store {
 	display: block;
 	float: left;
@@ -474,4 +486,3 @@ body {
 	font-weight: bold;
 	color: #39F;
 }
-
