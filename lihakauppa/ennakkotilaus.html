@@ -105,29 +105,71 @@ haMbur.addEventListener('click', () => {
 </ol></div>
 
 
-<!--ilmoitus mitä asiakkas laitaa-->
-    <form method="post" action="sissaaika.php" id="contactform">
+<!--asiakas voi kirjoitaan tiedot mutta se ei lähetä sitä minekään-->
+    <form onsubmit="return nimentarkastus(this)">
 		<div>
+        <p id="einimeä" class="eimitään" style="display: none;">laitain nimi</p>
             <label for="contactform_name">Nimi:</label>
 			<br>
 			<input name="contactform_name" id="contactform_name" type="text">
 			<br>
+      <!--<p id="eisähköpostia" class="eimitään" style="display: none;">laitain sähköposti</p>-->
             <label for="contactform_sender">Sähköposti:</label>
             <br>
 			<input name="contactform_sender" id="contactform_sender" type="email">   
             <br>
 			
+          <!--<p id="einumeroa" class="eimitään" style="display: none;">laitain puhelin numero</p>-->
             <label for="contactform_number">Puhelin:</label>
     		<br>
-			<input name="contactform_number" id="contactform_number" type="number">
+        
+			<input name="contactform_number" id="contactform_number" type="tel">
 			<br>
+      <p id="eitilausta" class="eimitään" style="display: none;">laitain viestiä</p>
 			<label for="contactform_message">Viesti:</label>
 			<br>
 			<textarea name="contactform_message" id="contactform_message" rows="10" cols="45"></textarea>
 			<br>
-			<input type="submit" name="submit" value="Lähetä">
+			<input type="submit" value="Lähetä">
 			</div>
 		</form>
+
+    <script>
+      
+      //ilmoitaa asiakaale jos hän ei ole laitanut mitään tietoihin.
+      function nimentarkastus(form) {
+        var Nimi = form.contactform_name.value;
+        //var sposti = form.contactform_sender.value;
+        //var Puhelin = form.contactform_number.value;
+        var viesti = form.contactform_message.value;
+
+        var einimea = document.getElementById("einimeä");
+        //var eipostia = document.getElementById("eisähköpostia");
+        //var einumeroat = document.getElementById("einumeroa");
+        var eitilaust = document.getElementById("eitilausta");
+
+
+
+        if (Nimi === '') {
+          einimea.style.display = "block";
+          return false;
+          
+
+        }
+        
+        if (viesti === '') {
+          eitilaust.style.display = "block";
+          return false;
+          
+        }
+
+
+
+      }
+    </script>
+
+
+
 
     <div class="clear"></div>
     </div>
