@@ -31,3 +31,8 @@ function lisaapiste() {
             paivitapiste();
         
         }
+
+ function poistapistejatalenna() {
+   piste = 0;
+   localStorage.setItem("piste", piste);
+ }
