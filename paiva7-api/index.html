@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Päivä 7 – Rajapinnat</title>
+
+</head>
+
+<body>
+
+ 
+
+<h1>Päivä 7 – Rajapinnat & JSON</h1>
+
+ 
+
+<p><b>Tila:</b> <span id="tila">Ei toimintaa vielä</span></p>
+
+ 
+
+<button onclick="haeUsers()">GET – hae käyttäjät</button>
+
+<button onclick="lisaaUser()">POST – lisää käyttäjä</button>
+
+<button onclick="muokkaaUser()">PUT – muokkaa käyttäjää</button>
+
+<button onclick="poistaUser()">DELETE – poista käyttäjä</button>
+
+ 
+
+<hr>
+
+ 
+
+<h2>Data</h2>
+
+<div id="lista">Tähän data ilmestyy</div>
+
+ 
+
+<hr>
+
+ 
+
+<h2>Datan käsittely</h2>
+
+<button onclick="naytaVainNimet()">map – näytä nimet</button>
+
+<button onclick="suodataNimella()">filter – suodata nimet</button>
+
+<button onclick="laskeMaara()">reduce – laske määrä</button>
+
+ 
+
+<div id="tulos"></div>
+
+ 
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
