@@ -195,7 +195,7 @@ function haeUsers() {
 
   asetaTila("Ladataan...");
 
- let data = Leanne Graham;
+ 
 
   fetch(API)
 
